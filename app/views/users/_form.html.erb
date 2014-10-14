@@ -15,23 +15,23 @@
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </div>
+
   <div class="field">
     <%= f.label :email %><br>
     <%= f.text_field :email %>
   </div>
+
   <div class="field">
-    <%= f.label :hashed_password %><br>
-    <%= f.text_field :hashed_password %>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
   </div>
+
   <div class="field">
-    <%= f.label :salt %><br>
-    <%= f.text_field :salt %>
+    <%= f.label :password_confirmation, "Confirmation" %>
+    <%= f.password_field :password_confirmation %>
   </div>
-  <div class="field">
-    <%= f.label :admin %><br>
-    <%= f.check_box :admin %>
-  </div>
+
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Create my account" %>
   </div>
 <% end %>

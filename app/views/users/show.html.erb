@@ -1,28 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
+<h1>
+  <%= gravatar_for @user %>
   <%= @user.name %>
-</p>
+</h1>
 
 <p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
-
-<p>
-  <strong>Hashed password:</strong>
-  <%= @user.hashed_password %>
-</p>
-
-<p>
-  <strong>Salt:</strong>
-  <%= @user.salt %>
-</p>
-
-<p>
-  <strong>Admin:</strong>
-  <%= @user.admin %>
+  <% if @user.admin %>
+    <%= @user.name %> is an <strong>ADMIN</strong>.
+  <% end %>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
