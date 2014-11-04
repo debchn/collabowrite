@@ -31,6 +31,8 @@ GEM
     awesome_nested_set (3.0.1)
       activerecord (>= 4.0.0, < 5)
     bcrypt-ruby (3.1.2)
+    bootstrap-will_paginate (0.0.10)
+      will_paginate
     builder (3.2.2)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -118,6 +120,7 @@ GEM
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
+    will_paginate (3.0.7)
 
 PLATFORMS
   ruby
@@ -125,6 +128,7 @@ PLATFORMS
 DEPENDENCIES
   awesome_nested_set
   bcrypt-ruby (= 3.1.2)
+  bootstrap-will_paginate (= 0.0.10)
   coffee-rails (~> 4.0.0)
   jbuilder (~> 2.0)
   jquery-rails
@@ -138,3 +142,4 @@ DEPENDENCIES
   turbolinks
   uglifier (>= 1.3.0)
   unicorn (= 4.8.3)
+  will_paginate (= 3.0.7)
