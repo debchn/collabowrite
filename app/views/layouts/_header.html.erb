@@ -1,0 +1,16 @@
+<header>
+    <nav>
+        <%= link_to "Home", "#" %>
+        <% if logged_in? %>
+          <%= link_to "Users", '#' %>
+          <!-- See rails tutorial Listing 8.16 -->
+          <%= link_to "Account", "#" %> <!-- this will be a drop down that will reveal: -->
+          <%= link_to "Profile", current_user %>
+          <%= link_to "Settings", edit_user_path(current_user) %>
+
+          <%= link_to "Log out", logout_path, method: "delete" %>
+        <% else %>
+          <%= link_to "Log in", login_path %>
+        <% end %>
+    </nav>
+</header>

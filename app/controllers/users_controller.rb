@@ -10,6 +10,7 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    @user = User.find(params[:id])
   end
 
   # GET /users/new
@@ -28,6 +29,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
+        log_in @user
         format.html { redirect_to @user, notice: 'Welcome to Collabowrite!' }
         format.json { render :show, status: :created, location: @user }
       else
