@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Collabowrite</title>
+  <title>Colabowrite</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag	 'https://fonts.googleapis.com/css?family=Montserrat:400,700' %>
+  <%= stylesheet_link_tag	 'https://fonts.googleapis.com/css?family=Droid+Serif' %>
+  <%= stylesheet_link_tag	 'https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css' %>
+
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -13,5 +16,6 @@
       <% end %>
       <%= yield %>
 
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </body>
 </html>

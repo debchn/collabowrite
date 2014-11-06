@@ -14,7 +14,19 @@ class PassagesController < ApplicationController
 
   # GET /passages/new
   def new
-    @passage = Passage.new
+    if logged_in?
+      @passage = Passage.new(:user_id => current_user.id)
+    else
+      @passage = Passage.new(:user_id => 1) # user is dummy "Anonymous" user (1)
+    end
+  end
+
+  def home
+    if logged_in?
+      @passage = Passage.new(:user_id => current_user.id)
+    else
+      @passage = Passage.new(:user_id => 1) # user is dummy "Anonymous" user (1)
+    end
   end
 
   # GET /passages/1/edit

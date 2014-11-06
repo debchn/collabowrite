@@ -14,7 +14,8 @@
  *= require_self
  */
 
- .gravatar {
+ /* Users */
+  .gravatar {
    float: left;
    margin-right: 10px;
  }

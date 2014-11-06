@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root                'passages#index'
+  root                'passages#home'
   get    'signup'  => 'users#new'
   
   get    'login'   => 'sessions#new'
