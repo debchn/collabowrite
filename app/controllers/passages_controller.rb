@@ -10,6 +10,19 @@ class PassagesController < ApplicationController
   # GET /passages/1
   # GET /passages/1.json
   def show
+
+    # if the requested passage is NOT a root passage (beginning of the story), then ender the show page for the requested passage's root passage.
+
+    unless @passage.root == @passage
+      redirect_to passage_url(@passage.root)
+    end
+
+    if logged_in?
+      @child = Passage.new(:user_id => current_user.id)
+    else
+      @child = Passage.new(:user_id => 1) # user is dummy "Anonymous" user (1)
+    end
+
   end
 
   # GET /passages/new

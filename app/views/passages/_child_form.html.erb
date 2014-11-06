@@ -1,10 +1,10 @@
-<%= form_for(@passage) do |f| %>
-  <% if @passage.errors.any? %>
+<%= form_for(@child) do |f| %>
+  <% if @child.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@passage.errors.count, "error") %> prohibited this passage from being saved:</h2>
+      <h2><%= pluralize(@child.errors.count, "error") %> prohibited this passage from being saved:</h2>
 
       <ul>
-      <% @passage.errors.full_messages.each do |message| %>
+      <% @child.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -12,29 +12,13 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
-  </div>
-  <div class="field">
-    <%= f.label :prompt_id %><br>
-    <%= f.number_field :prompt_id %>
-  </div>
-  <div class="field">
     <%= f.label :text %><br>
     <%= f.text_area :text %>
   </div>
-  <div class="field">
-    <%= f.label :parent_id %><br>
-    <%= f.number_field :parent_id %>
-  </div>
-  <div class="field">
-    <%= f.label :lft %><br>
-    <%= f.number_field :lft %>
-  </div>
-  <div class="field">
-    <%= f.label :rgt %><br>
-    <%= f.number_field :rgt %>
-  </div>
+
+    <%= f.hidden_field :user_id, :value => @child.user_id %>
+    <%= f.hidden_field :parent_id, :value => @passage.id %>
+
   <div class="actions">
     <%= f.submit %>
   </div>
