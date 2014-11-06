@@ -18,7 +18,7 @@ postTitle:function(responseData){
 },
 
 updateDOM: function(){
-	$('.prompt').text(prompt.promptTitle)
+	$('p.prompt').text(prompt.promptTitle)
 	}
 };
 
