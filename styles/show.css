@@ -1,0 +1,13 @@
+.originalPost {
+  display: inline;
+}
+
+.originalPost p {
+  font-size: 21px;
+  max-width: 940px;
+}
+
+.others p {
+  font-size: 21px;
+  max-width: 940px;
+}
