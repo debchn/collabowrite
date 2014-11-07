@@ -271,7 +271,7 @@ p.prompt {
   border-color: #005544;
 }
 
-input[type=text], textarea {
+input[type=text], input[type=password], textarea {
   width: 500px;
   display: inline-block;
   padding: 15px 30px;
@@ -289,7 +289,7 @@ input[type=text], textarea {
   background: #16a085;
 }
 
-input[type=text] {
+input[type=text], input[type=password] {
   height: 75px;
   margin-bottom: 25px;
 }
@@ -421,4 +421,13 @@ a:hover {
   display: inline;
   font-size: 28px;
   margin: 20px;
+}
+
+/* Login and Sign Up */
+#session_email, #session_password, #user_name, #user_email, #user_password, #user_password_confirmation {
+  height: 25px;
+  width: 500px;
+  background: #16a085;
+  display: block;
+  margin: 0 auto;
 }

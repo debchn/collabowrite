@@ -18,7 +18,7 @@
 	<% for passage in @user.passages %>
 		<div class="triangle-isosceles">
 			<p class="contrib">"<%= passage.text %>"</p><p class="ellipsis">...</p>
-			<a href="" class="toPassage">More</a>
+			<%= link_to "More", passage_url(passage), :class => 'toPassage' %>
 		</div>
 	<% end %>
 	<a href="" class="loadMore"><p>Load More</p></a>
