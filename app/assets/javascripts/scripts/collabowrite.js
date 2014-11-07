@@ -2,7 +2,7 @@ var prompt = {
 	promptList: {},
 	init:function(){
 		$.ajax({
-			url: 'http://www.reddit.com/r/writingprompts.json',
+			url: 'https://www.reddit.com/r/writingprompts.json',
 			success: prompt.postTitle
 		});
 	},
