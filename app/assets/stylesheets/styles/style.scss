@@ -96,8 +96,7 @@ p.prompt {
   border-color: #005544;
 }
 
-textarea {
-  height:200px;
+input[type=text], textarea {
   width:500px;
   display: inline-block;
   padding: 15px 30px;
@@ -114,7 +113,16 @@ textarea {
           transition: all 0.4s;
   background:$background;
 }
-textarea:focus {
+
+input[type=text] {
+  height: 75px;
+  margin-bottom: 25px;
+}
+
+textarea {
+  height:200px;
+}
+textarea:focus, input[type=text]:focus {
   color: white;
   outline: none;
   border-color:#005544;

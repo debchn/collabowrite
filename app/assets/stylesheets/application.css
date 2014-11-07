@@ -13,9 +13,3 @@
  *= require_tree .
  *= require_self
  */
-
- /* Users */
-  .gravatar {
-   float: left;
-   margin-right: 10px;
- }

@@ -1,35 +1,19 @@
-<h1>Listing passages</h1>
+<h1><i class="fa fa-book"></i> stories</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>User</th>
-      <th>Prompt</th>
-      <th>Text</th>
-      <th>Parent</th>
-      <th>Lft</th>
-      <th>Rgt</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<%= link_to 'Start a new one!', new_passage_path %>
 
-  <tbody>
-    <% @passages.each do |passage| %>
-      <tr>
-        <td><%= passage.user_id %></td>
-        <td><%= passage.prompt_id %></td>
-        <td><%= passage.text %></td>
-        <td><%= passage.parent_id %></td>
-        <td><%= passage.lft %></td>
-        <td><%= passage.rgt %></td>
-        <td><%= link_to 'Show', passage %></td>
-        <td><%= link_to 'Edit', edit_passage_path(passage) %></td>
-        <td><%= link_to 'Destroy', passage, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Passage', new_passage_path %>
+<div class="stories">
+  <% @passages.each do |passage| %>
+    <div class="story">
+      <div class="triangle-isosceles">
+        <h3 class="title"><%= passage.title %></h3>
+        <h3 class="author">
+          By <span class="userName"><%= link_to passage.user.name, user_path(passage.user) %></span>
+        </h3>
+        <%= gravatar_for(passage.user) %>
+        <p class="contrib passages"><%= passage.text %></p>
+        <%= link_to 'Read More', passage, :class => 'toPassage' %>
+      </div>
+    </div>
+  <% end %>
+</div>

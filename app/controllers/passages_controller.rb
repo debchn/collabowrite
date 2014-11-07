@@ -4,7 +4,8 @@ class PassagesController < ApplicationController
   # GET /passages
   # GET /passages.json
   def index
-    @passages = Passage.all
+    # @passages = Passage.all
+    @passages = Passage.where({parent_id: nil})
   end
 
   # GET /passages/1

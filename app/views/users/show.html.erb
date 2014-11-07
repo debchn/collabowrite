@@ -1,15 +1,31 @@
 <p id="notice"><%= notice %></p>
 
-<h1>
-  <%= gravatar_for @user %>
-  <%= @user.name %>
-</h1>
+<h1 class="show"><span class="userName"><i class="fa fa-user"></i> User</span></h1>
+
+<div class="bio">
+	<h2 class="userName"><%= @user.name %></h2>
+	<%= gravatar_for @user %>
+	<h2 class="location"><%= @user.location %></h2>
+	<h2 class="gender"><%= @user.gender %></h2>	
+	<h2 class="contributions"><span class="numberContributions"><%= @user.passages.length %></span> Contributions</h2>
+	<h2 class="ops"><span class="numberOps"><%= Passage.where(:user_id => @user.id, :parent_id => nil).length %></span> as Original Writer</h2>
+	<%= link_to 'Edit', edit_user_path(@user) %> |
+	<%= link_to 'Back', users_path %>
+</div>
+
+<div class="contribs">
+	<h2 class="contribTitle">Contributions</h2>
+	<% for passage in @user.passages %>
+		<div class="triangle-isosceles">
+			<p class="contrib">"<%= passage.text %>"</p><p class="ellipsis">...</p>
+			<a href="" class="toPassage">More</a>
+		</div>
+	<% end %>
+	<a href="" class="loadMore"><p>Load More</p></a>
+</div>
 
 <p>
   <% if @user.admin %>
     <%= @user.name %> is an <strong>ADMIN</strong>.
   <% end %>
 </p>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
