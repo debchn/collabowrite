@@ -247,10 +247,10 @@ a:hover {
 /* Login and Sign Up */
 
 
-#session_email, #session_password, #user_name, #user_email, #user_password, #user_password_confirmation {
+#session_email, #session_password, #user_name, #user_email, #user_password, #user_password_confirmation, #user_location, #user_gender {
   height: 25px;
   width: 500px;
   background: $background;
   display: block;
-  margin: 0 auto;
+  margin: 10px auto;
 }
