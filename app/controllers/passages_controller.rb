@@ -95,6 +95,6 @@ class PassagesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def passage_params
-      params.require(:passage).permit(:user_id, :prompt_id, :text, :parent_id, :lft, :rgt)
+      params.require(:passage).permit(:user_id, :prompt_id, :text, :title, :parent_id, :lft, :rgt)
     end
 end
