@@ -19,4 +19,4 @@
 .DS_Store
 
 # So apparently new rails versions come with a "secrets.yml" file, geez
-secrets.yml
+# secrets.yml
